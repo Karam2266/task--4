@@ -1,0 +1,304 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif, verdana;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background-color: rgb(236, 169, 45);
+  box-shadow: 0px 0px 5px 2px #8f8f8f;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5% 0px;
+  letter-spacing: 3px;
+}
+
+.logo {
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  padding: 20px;
+  color: white;
+  font-size: 25px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+li {
+  padding: 20px 30px;
+}
+
+li:hover {
+  background-color: rgba(255, 155, 5, 0.942);
+  cursor: pointer;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header {
+  background-image: url(./assets/background.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+#menu h3,
+#about h3,
+#locations h3 {
+  font-weight: lighter;
+  font-size: 25px;
+  padding-bottom: 1%;
+  margin-bottom: 1.5%;
+  border-bottom: 1px solid #d1c8b5;
+}
+
+#menu {
+  height: min-content;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#menu .menu-cards {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  column-gap: 1%;
+  row-gap: 1.5%;
+}
+
+.menu-desc {
+  color: #3a3838;
+}
+
+.menu-cards .mcard {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.menu-cards div p {
+  background-color: rgba(255, 136, 0, 0.802);
+  color: white;
+  padding: 3%;
+  width: fit-content;
+}
+
+.menu-cards .mcard img {
+  width: 100%;
+  height: 300px;
+  background-color: #424242;
+}
+
+#about {
+  height: min-content;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#about .desc {
+  color: #3a3838;
+}
+
+#about .about-cards {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  column-gap: 5%;
+}
+
+.about-cards .card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.about-cards .card .name {
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.about-cards .card span {
+  color: #808080;
+}
+
+.about-cards .card .bio {
+  font-size: 15px;
+}
+
+.about-cards .card button {
+  height: 40px;
+  border: 1px solid #ff730029;
+  background-color: #fde651;
+  color: white;
+  border-radius: 0px;
+  font-size: 20px;
+}
+
+.about-cards .card button:hover {
+  background-color: #ffbf00;
+  cursor: pointer;
+}
+
+.about-cards .card img {
+  width: 100%;
+  height: 300px;
+  background-color: #424242;
+}
+
+#locations {
+  height: min-content;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.locations-desc {
+  color: #3a3838;
+}
+
+#locations .locations-cards {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  column-gap: 5%;
+}
+
+.locations-cards .lcard {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.locations-cards .lcard img {
+  width: 100%;
+  height: 100%;
+  background-color: #424242;
+}
+
+.locations-cards .lcard p {
+  text-align: center;
+  font-size: 30px;
+}
+
+#contact {
+  height: min-content;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input {
+  height: 40px;
+  padding: 10px;
+  border-radius: 0px;
+  border: 1px solid #c1c1c1;
+}
+
+form button {
+  width: fit-content;
+  padding: 15px 30px;
+  background-color: #fde651;
+  border: 1px solid #ffbf00;
+  color: white;
+}
+
+form button:hover {
+  background-color: #ffbf00;
+  cursor: pointer;
+}
+
+footer {
+  background-color: rgb(0, 17, 87);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  #menu .menu-cards {
+      grid-template-columns: repeat(3, auto);
+  }
+
+  #about .about-cards {
+      grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  li {
+      padding: 10px;
+  }
+
+  #menu .menu-cards {
+      grid-template-columns: repeat(2, auto);
+  }
+
+  #about .about-cards {
+      grid-template-columns: 1fr;
+  }
+
+  #locations .locations-cards {
+      grid-template-columns: 1fr;
+  }
+
+  .menu-cards .mcard img,
+  .about-cards .card img {
+      height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+      font-size: 20px;
+  }
+
+  a {
+      font-size: 16px;
+  }
+
+  li {
+      padding: 8px;
+  }
+
+  .menu-cards .mcard img,
+  .about-cards .card img {
+      height: 150px;
+  }
+
+  .locations-cards .lcard p {
+      font-size: 20px;
+  }
+}
